@@ -41,16 +41,6 @@
         };
       };
     };
-    nodev = {
-      "/" = {
-        fsType = "tmpfs";
-        mountOptions = [
-          "defaults"
-          "size=12G"
-          "mode=755"
-        ];
-      };
-    };
     lvm_vg = {
       pool = {
         type = "lvm_vg";
@@ -60,7 +50,7 @@
             content = {
               type = "filesystem";
               format = "ext4";
-              mountpoint = "/nix";
+              mountpoint = "/";
               mountOptions = [
                 "defaults"
               ];
